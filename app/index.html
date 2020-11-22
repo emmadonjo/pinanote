@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"  dir="ltr">
+    <head>
+        <title>Pin a Note App</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="uxa-compatible" content="IE=edge" />
+        <link href="../src/css/app.css" rel="stylesheet" />
+        <link rel="icon" href="../src/images/pinanote.ico" />
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <div class="image-wrapper">
+                    <img src="../src/images/pinanote.ico" width="24px" alt="Pin a Note" />
+                </div>
+                <div class="heading-wrapper">
+                    <h1>PIN A NOTE</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="forms">
+                <button type="button" id="pinNoteFormToggler">Pin</button>
+                <button type="button" id="searchNoteFormToggler">Search</button>
+                <span class="status">0 Notes</span>
+                <div class="hide" id="pinNoteForm">
+                    <form method="GET">
+                        <span class="close" id="closeNoteForm">X</span>
+                        <div class="pinInfo"></div>
+                        <input type="text" placeholder="Enter Note Title" id="noteTitleField" maxlength="30" />
+                        <textarea rows="5" placeholder="Enter Note Text" id="noteTextField" maxlength="160"></textarea>
+                        <input type="hidden" value="" id="hiddenId" />
+                        <button type="button" role="button" id="pinNoteBtn">Pin</button>
+                    </form>
+                </div>
+                <div class="hide" id="searchNoteForm">
+                    
+                    <form method="GET">
+                        <div class="searchInfo"></div>
+                        <span class="close" id="closeSearchForm">X</span>
+                        <input type="search" placeholder="Search Notes" id="searchNoteField" maxlength="30" />
+                        <button type="button" role="button" id="searchNoteBtn">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div id="root">
+                
+            </div>
+        </main>
+        <script src="./assets/pinanote.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,250 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body{
+    font-size: 16px;
+    font-family: 'Roboto', monospace 'Courier New', Courier;
+    background-color: #fff;
+    position: relative;
+}
+
+header  img{
+    border-radius: 50%;
+}
+
+header{
+    background-color: #002824;
+    color: #B1D034;
+    padding:10px;
+    border-bottom:2px solid #00E385; ;
+}
+
+header .wrapper{
+    display: flex;
+    flex-direction: row;
+
+}
+
+h1{
+    text-align: right;
+    font-size: 1.2em;
+}
+
+.heading-wrapper{
+    flex-basis: 80%;
+}
+
+.image-wrapper{
+    flex: 20%;
+}
+
+.wrapper{
+    width: 90%;
+    margin: auto;
+}
+
+.forms button{
+    border:none;
+    background-color: #00E385;
+    color: #002824;
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    margin: 15px 10px;
+}
+
+.forms button:hover{
+    background-color: #00E38588;
+    cursor: pointer;
+    animation: pop .1s ease-in-out;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes pop{
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+#root{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+#root .cols{
+    width: 23%;
+    padding: 1%;
+    margin-top: 15px;
+    
+}
+
+#root .cols > div{
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 2px #ddd;
+    padding: 5px;
+}
+
+.form-tab{
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    background-color: #00000099;
+}
+
+.form-tab form{
+    width: 640px;
+    margin: auto;
+}
+
+form{
+    background-color: #002824;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    top:25%
+}
+
+.status{
+    font-size: 1.2em;
+    color: #00E385;
+}
+
+input,
+textarea{
+    width: 98%;
+    padding:5px 1%;
+    font-size: 1.1em;
+    display: block;
+    margin-top: 10px;
+    background-color: inherit;
+    color: #B1D034;
+    border: none;
+    border-bottom: 1px solid #B1D034;
+}
+
+textarea{
+    resize: none;
+}
+form button{
+    display: inline-block;
+    margin-top:10px;
+    border:none;
+    background-color: #B1D034;
+    color: #002824;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    font-weight: 900;
+    border-radius: 10px;
+}
+
+form button:hover{
+    cursor: pointer;
+    background-color: #B1D034aa;
+}
+
+::placeholder{
+    color: #00E385;
+}
+
+.close{
+    display: block;
+    position: absolute;
+    right:15px;
+    top:5px;
+    color: #B1D034;
+}
+
+.close:hover{
+    cursor: pointer;
+    color: #00E385;
+}
+
+
+.cols h2{
+    font-size: 1.1em;
+    color: #002824;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.cols .meta{
+    font-size: 0.9em;
+    color: #00E385;
+}
+
+.cols p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cols button{
+    background-color:  #00E38588;
+    color: #002824;
+    font-size: 0.9;
+    border:none;
+    padding: 3px 5px
+}
+
+.cols button:hover{
+    background-color: #00E385;
+    cursor: pointer;
+    animation: wobble .3s ease-in-out;
+    animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode:forwards;
+}
+
+.hide{
+    display: none;
+}
+
+@keyframes wobble{
+    100%{
+        transform: rotate(5deg);
+    }
+}
+
+@media only screen and (max-width:1024px){
+    #root .cols{
+        width: 31%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    #root .cols{
+        width:48%;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .form-tab form{
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width:480px){
+    #root .cols{
+        width: 98%;
+    }
+}
+
+ul{
+    color: #00E385;
+}
+
+ul li{
+    list-style-position: inside;
+}
